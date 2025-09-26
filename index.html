@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parenting Kids with CHD | Pediatric Neurodevelopmental Center</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS Reset & Base Styles --- */
+        :root {
+            --color-primary: #005a60; /* Dark Teal */
+            --color-secondary: #3eb058; /* Soft Green */
+            --color-accent: #0693e3; /* A friendly blue for links */
+            --color-background: #f8f9fa; /* Light Gray */
+            --color-text: #3f3f3f; /* Dark Gray */
+            --color-white: #ffffff;
+            --font-family: 'Nunito Sans', sans-serif;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-family); background-color: var(--color-background); color: var(--color-text); line-height: 1.6; }
+
+        /* --- Header for Logo --- */
+        .page-header { background-color: var(--color-white); padding: 20px; text-align: center; border-bottom: 1px solid #eee; }
+        .page-header img { max-width: 250px; height: auto; }
+        
+        /* --- Content Wrapper for Readability --- */
+        .content-wrapper { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        
+        /* --- Typography --- */
+        h1, h2, h3 { color: var(--color-primary); line-height: 1.2; margin-bottom: 20px; }
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2rem; text-align: center; }
+        h3 { font-size: 1.5rem; }
+        p { margin-bottom: 15px; }
+
+        /* --- Hero Section --- */
+        .hero { color: var(--color-white); background: linear-gradient(135deg, #023a5c, var(--color-primary)); }
+        .hero h1, .hero .hero-text p { color: var(--color-white); }
+        .hero-layout { display: flex; align-items: center; gap: 40px; }
+        .hero-text { flex: 1; }
+        .hero-text p { font-size: 1.125rem; }
+        .hero-form-container { flex: 1; text-align: center; }
+
+        /* Primary CTA: Form Box */
+        .form-box { background-color: var(--color-white); color: var(--color-text); padding: 30px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .form-box h3 { font-size: 1.2rem; text-transform: uppercase; color: var(--color-primary); }
+        .form-box p { font-size: 0.9rem; margin-bottom: 20px; }
+        .form-box input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 15px; font-size: 1rem; }
+        .form-box button { width: 100%; background-color: var(--color-secondary); color: var(--color-white); padding: 15px 20px; border: none; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease; font-size: 1.1rem; }
+        .form-box button:hover { background-color: #308e46; }
+
+        /* Secondary CTA: Phone Link */
+        .secondary-cta {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--color-white);
+            opacity: 0.9;
+        }
+        .secondary-cta a {
+            color: var(--color-white);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .secondary-cta a:hover {
+            text-decoration: none;
+        }
+        
+        /* --- About Section --- */
+        .about { background-color: var(--color-white); }
+        .about-layout { display: flex; align-items: center; gap: 40px; }
+        .about-image { flex-shrink: 0; text-align: center; }
+        .about-image img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--color-primary); }
+        .about-image h4 { margin-top: 10px; color: var(--color-primary); }
+        .about-text ul { list-style-position: inside; padding-left: 0; }
+        .about-text ul li { margin-bottom: 10px; }
+
+        /* --- Benefits Section --- */
+        .benefits { background-color: var(--color-background); }
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; margin-top: 40px; }
+        .benefit-card { background-color: var(--color-white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .benefit-card svg { width: 50px; height: 50px; margin-bottom: 20px; color: var(--color-secondary); }
+
+        /* --- Final CTA Section --- */
+        .cta { background-color: var(--color-primary); color: var(--color-white); }
+        .cta h2, .cta h3, .cta p { color: var(--color-white); }
+        .cta-button { display: inline-block; background-color: var(--color-secondary); color: var(--color-white); padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 50px; margin-top: 20px; transition: background-color 0.3s ease; }
+        .cta-button:hover { background-color: #308e46; }
+        
+        /* --- Sticky CTA Bar --- */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 0.4s ease-in-out;
+        }
+        .sticky-cta.visible {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .sticky-cta p {
+            margin: 0;
+        }
+        .cta-button-sticky {
+            display: inline-block;
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            padding: 10px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+        .cta-button-sticky:hover {
+            background-color: #308e46;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 820px) { 
+            .hero-layout, .about-layout { flex-direction: column; } 
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.75rem; }
+            .content-wrapper { padding: 40px 20px; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .sticky-cta p { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <img src="https://pedneurocenter.com/wp-content/uploads/2023/10/ped-neuro-center-atlanta-GA-logo-600.png" alt="Pediatric Neurodevelopmental Center Logo">
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="content-wrapper">
+                <div class="hero-layout">
+                    <div class="hero-text">
+                        <h1>Parenting Kids with CHD</h1>
+                        <p><strong>Supporting Neurodevelopment and Emotional Wellbeing</strong></p>
+                        <p>Join the waitlist for the upcoming, on-demand video series with pediatric neuropsychologist, Dr. Dawn Ilardi. It provides practical information and strategies to support families touched by congenital heart disease (CHD).</p>
+                    </div>
+                    <div class="hero-form-container">
+                        <div class="form-box">
+                            <h3>GET NOTIFIED WHEN WE LAUNCH THE PARENTING KIDS WITH CHD SERIES</h3>
+                            <p>Enter your details to be the first to know.</p>
+                            <form>
+                               <input type="email" placeholder="Enter your email address" required>
+                               <button type="submit">Join the Waitlist - It's Free!</button>
+                            </form>
+                        </div>
+                        <div class="secondary-cta">
+                            <p>To inquire about a clinical evaluation, <a href="tel:+14047212644">call us directly</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="content-wrapper">
+                <div class="about-layout">
+                    <div class="about-image">
+                        <img src="https://pedneurocenter.com/wp-content/uploads/bb-plugin/cache/ped-neuro-center-atlanta-GA-dawn-ilardi-portrait-portrait-cab1d7708fdd2be957ab914bd73d2dda-hsnk1j2fb6el.jpg" alt="Dr. Dawn Ilardi">
+                        <h4><strong>Dawn Ilardi,</strong><br>PhD, ABPP-CN</h4>
+                    </div>
+                    <div class="about-text">
+                        <p>Your heart hero is incredible, and your bravery and dedication to your child with congenital heart disease (CHD) is my inspiration. After many years of listening to your stories and concerns, I’ve come to understand that there isn’t enough support for parents of children with CHD, and that too few providers truly understand CHD.</p>
+                        <p>Since 2012, I have worked with children and teens with CHD and their families, and I've participated in multi-center neurodevelopmental outcome research. It’s time to try something new - to increase your access to more practical information and resources. This is why I created an online program just for you, called Parenting Kids with CHD.</p>
+                        <p>We already know that <strong>neurodevelopmental differences and emotional challenges are common in children with CHD</strong>. Importantly, we also know that children with CHD and their families have incredible <strong>resilience and courage</strong>. I want to guide parents in using those strengths to support their child’s neurodevelopmental growth and wellbeing. I'll be sharing the latest research and parent-focused strategies with <strong>on-demand video toolkits,</strong> so you have opportunities to:</p>
+                        <ul>
+                            <li>Build <strong>knowledge</strong> so you can advocate for your child</li>
+                            <li>Build <strong>skills</strong> to support your child</li>
+                            <li>Join a <strong>community</strong> where we can learn and grow together</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="content-wrapper">
+                <h2>Guiding Parents to Help Their Kids with CHD Thrive</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                        <p>Join the mailing list for a <strong>monthly e-newsletter</strong> with CHD parenting related resources.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" /></svg>
+                        <p>Learn at your own pace with <strong>pre-recorded video sessions</strong> for parents about neurodevelopment and emotional wellbeing.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962c.51.054.994.097 1.485.14.597.047 1.192.055 1.79.02.595-.035 1.183-.112 1.764-.216m-13.04.216v1.016c0 .744.597 1.34 1.34 1.34h10.352c.744 0 1.34-.596 1.34-1.34V15.21a3 3 0 00-1.83-2.72M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        <p>Join me and other parents <strong>live, online</strong> where I’ll be sharing practical information, resources, and strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="content-wrapper" style="text-align: center;">
+                <h3><strong>Every child with CHD is unique. Gain parenting resources from a leading CHD expert.</strong></h3>
+                <p>Join the waitlist today and be the first to access the on-demand video series.</p>
+                <a href=".hero" class="cta-button">Join The Waitlist</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="sticky-cta" id="sticky-cta">
+        <p>Get notified when the video series launches.</p>
+        <a href=".hero" class="cta-button-sticky">Join the Waitlist</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const stickyCTA = document.getElementById('sticky-cta');
+            const heroSection = document.querySelector('.hero');
+            const footerCTA = document.querySelector('.cta');
+
+            if (!stickyCTA || !heroSection || !footerCTA) {
+                return;
+            }
+
+            const heroHeight = heroSection.offsetHeight;
+            const footerCTATop = footerCTA.offsetTop;
+            const offset = 50; // Hides the bar 50px before the footer is visible
+
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                const viewportBottom = scrollPosition + window.innerHeight;
+
+                // Condition to SHOW the bar
+                const shouldBeVisible = scrollPosition > heroHeight && viewportBottom < (footerCTATop + offset);
+
+                if (shouldBeVisible) {
+                    stickyCTA.classList.add('visible');
+                } else {
+                    stickyCTA.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
