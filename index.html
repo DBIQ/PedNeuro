@@ -154,7 +154,7 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="hero-form">
             <div class="content-wrapper">
                 <div class="hero-layout">
                     <div class="hero-text">
@@ -163,14 +163,7 @@
                         <p>Join the waitlist for the upcoming, on-demand video series with pediatric neuropsychologist, Dr. Dawn Ilardi. It provides practical information and strategies to support families touched by congenital heart disease (CHD).</p>
                     </div>
                     <div class="hero-form-container">
-                        <div class="form-box">
-                            <h3>GET NOTIFIED WHEN WE LAUNCH THE PARENTING KIDS WITH CHD SERIES</h3>
-                            <p>Enter your details to be the first to know.</p>
-                            <form>
-                               <input type="email" placeholder="Enter your email address" required>
-                               <button type="submit">Join the Waitlist - It's Free!</button>
-                            </form>
-                        </div>
+                        <script src=https://parenting-kids-with-chd.mykajabi.com/forms/2149194893/embed.js></script>
                         <div class="secondary-cta">
                             <p>To inquire about a clinical evaluation, <a href="tel:+14047212644">call us directly</a>.</p>
                         </div>
@@ -213,7 +206,9 @@
                         <p>Learn at your own pace with <strong>pre-recorded video sessions</strong> for parents about neurodevelopment and emotional wellbeing.</p>
                     </div>
                     <div class="benefit-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962c.51.054.994.097 1.485.14.597.047 1.192.055 1.79.02.595-.035 1.183-.112 1.764-.216m-13.04.216v1.016c0 .744.597 1.34 1.34 1.34h10.352c.744 0 1.34-.596 1.34-1.34V15.21a3 3 0 00-1.83-2.72M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.66 1.487c.84.28 1.6.438 2.378.508l.394.045a.75.75 0 00.72-.818 9.252 9.252 0 00-1.898-6.19c-.279-.281-.629-.444-1.026-.549l-.027-.008c-.288-.083-.591-.125-.904-.125s-.616.042-.904.125l-.027.008c-.397.105-.747.268-1.026.549a9.252 9.252 0 00-1.898 6.19c0 .416.336.752.752.752a.75.75 0 00.72-.818c.07-.07.135-.145.197-.225a.75.75 0 01.691-.397h2.25c.348 0 .68.14.92.397.062.08.127.155.197.225a.75.75 0 00.72.818l.394-.045a9.38 9.38 0 002.378-.508c.84-.28 1.6-.438 2.378-.508l.394-.045a.75.75 0 00.72-.818 9.252 9.252 0 00-1.898-6.19c-.279-.281-.629-.444-1.026-.549l-.027-.008c-.288-.083-.591-.125-.904-.125s-.616.042-.904.125l-.027.008c-.397.105-.747.268-1.026.549a9.252 9.252 0 00-1.898 6.19zM12 12a3 3 0 11-6 0 3 3 0 016 0z" clip-rule="evenodd"/>
+                        </svg>
                         <p>Join me and other parents <strong>live, online</strong> where I’ll be sharing practical information, resources, and strategies.</p>
                     </div>
                 </div>
@@ -224,20 +219,20 @@
             <div class="content-wrapper" style="text-align: center;">
                 <h3><strong>Every child with CHD is unique. Gain parenting resources from a leading CHD expert.</strong></h3>
                 <p>Join the waitlist today and be the first to access the on-demand video series.</p>
-                <a href=".hero" class="cta-button">Join The Waitlist</a>
+                <a href="#hero-form" class="cta-button">Join The Waitlist</a>
             </div>
         </section>
     </main>
 
     <div class="sticky-cta" id="sticky-cta">
         <p>Get notified when the video series launches.</p>
-        <a href=".hero" class="cta-button-sticky">Join the Waitlist</a>
+        <a href="#hero-form" class="cta-button-sticky">Join the Waitlist</a>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const stickyCTA = document.getElementById('sticky-cta');
-            const heroSection = document.querySelector('.hero');
+            const heroSection = document.querySelector('#hero-form');
             const footerCTA = document.querySelector('.cta');
 
             if (!stickyCTA || !heroSection || !footerCTA) {
