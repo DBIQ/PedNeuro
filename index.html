@@ -162,6 +162,92 @@
         }
 
         /* --- Responsive Design --- */
+        
+          :root {
+            --font-family: 'Opens Sans', sans-serif; 
+          }
+        
+          .form {
+            font-family: var(--font-family);
+        	background-color: #FFFFFF;
+        	border-radius: 3px;
+        	box-sizing: border-box;
+        	columns: auto;
+        	padding: 40px 20px;
+          }
+        
+          .form__content {
+        	box-sizing: border-box;
+        	columns: auto;
+        	margin: 0px 10px;
+        	max-width: 350px;
+        	position: relative;
+        	z-index: 1;
+          }
+        
+          .form__title {
+        	box-sizing: border-box;
+        	color: #151515;
+        	columns: auto;
+        	font-size: 24px;
+        	line-height: 38.4px;
+        	margin: 0px 0px 20px;
+        	text-align: center;
+        	z-index: 1;
+        }
+        
+        .form__subtitle {
+        	box-sizing: border-box;
+        	color: #595959;
+        	columns: auto;
+        	font-size: 14px;
+        	line-height: 22.4px;
+        	margin: 0px 0px 10px;
+        	z-index: 1;
+        }
+        
+          .form__content input[type="text"],
+          .form__content input[type="email"] {
+        position: relative;
+            margin-block-end: 10px;
+        border: none;
+            width:100%;
+        	background-color: #F3F5F7;
+        	border-radius: 3px;
+        	box-sizing: border-box;
+        	columns: auto;
+        	cursor: text;
+        	display: inline-block;
+        	overflow: clip;
+        	padding: 10px 20px 10px 10px;
+        	transition: 0.2s;
+        	z-index: 1;
+          }
+        
+          .form__content input[type="submit"] {
+            background-color: #308e46;
+            appearance: auto;
+        	border-radius: 3px;
+        	box-sizing: border-box;
+        	color: #FFFFFF;
+        	columns: auto;
+        	cursor: default;
+        	display: flex;
+        	font-size: 14px;
+        	line-height: 22.4px;
+        	margin: 10px auto 0;
+        	padding: 12px 20px;
+        	text-align: center;
+        	transition: 0.2s;
+        	z-index: 1;
+           border: none;
+          }
+          
+          .form__content input[type="submit"]:hover {
+            background-color: #006666; 
+          }
+
+        /* --- Responsive Design --- */
         @media (max-width: 820px) { 
             .hero-layout, .about-layout { flex-direction: column; } 
         }
@@ -190,7 +276,18 @@
                         <p>Join the waitlist for the upcoming, on-demand video series with pediatric neuropsychologist, Dr. Dawn Ilardi. It provides practical information and strategies to support families touched by congenital heart disease (CHD).</p>
                     </div>
                     <div class="hero-form-container">
-                        <script src=https://parenting-kids-with-chd.mykajabi.com/forms/2149194893/embed.js></script>
+                        <div class="form">
+                        <div class="form__content">
+                          <h2 class="form__title">GET NOTIFIED WHEN WE LAUNCH THE PARENTING KIDS WITH CHD SERIES</h2>
+                          <p class="form__subtitle">Enter your details to be the first to know.</p>
+                          <form action="https://dawnilardi.podia.com/email_lists/1123251/subscriptions" accept-charset="UTF-8" method="post">
+                        
+                          
+                            <input type="text" name="name" placeholder="Name" />
+                            <input type="email" name="email" required="required" placeholder="Email" />
+                            <input type="submit" value="Join the Waitlist - It's Free!" /> </form>
+                        </div>
+                    </div>
                         <div class="secondary-cta">
                             <p>To inquire about a clinical evaluation, <a href="tel:+14047212644">call us directly</a>.</p>
                         </div>
