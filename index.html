@@ -97,6 +97,49 @@
         .secondary-cta a:hover {
             text-decoration: none;
         }
+      
+      /* --- Kit Section --- */
+        .kit {
+            background-color: var(--color-white);
+        }
+
+        .kit-cards-layout { 
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+
+        .kit-card {
+            flex: 1;
+            padding: 30px;
+            background-color: var(--color-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .kit-card h4 {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .kit-card ul {
+            list-style-type: disc;
+            list-style-position: outside;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        .kit-card ul li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .kit-cards-layout {
+                flex-direction: column;
+            }
+        }
         
         /* --- About Section --- */
         .about { background-color: var(--color-white); }
@@ -278,19 +321,41 @@
                     <div class="hero-form-container">
                         <div class="form">
                         <div class="form__content">
-                          <h2 class="form__title">GET NOTIFIED WHEN WE LAUNCH THE PARENTING KIDS WITH CHD SERIES</h2>
-                          <p class="form__subtitle">Enter your details to be the first to know.</p>
+                          <h2 class="form__title">Your Free CHD Parent Starter Kit</h2>
+                          <p class="form__subtitle">Enter your email for immediate access to 2 video toolkits on Neurodevelopmental Evaluations and Anxiety in CHD.</p>
                           <form action="https://dawnilardi.podia.com/email_lists/1123251/subscriptions" accept-charset="UTF-8" method="post">
                         
                           
                             <input type="text" name="name" placeholder="Name" />
                             <input type="email" name="email" required="required" placeholder="Email" />
-                            <input type="submit" value="Join the Waitlist - It's Free!" /> </form>
+                            <input type="submit" value="Get My CHD Kit Now" /> </form>
                         </div>
                     </div>
                         <div class="secondary-cta">
                             <p>To inquire about a clinical evaluation, <a href="tel:+14047212644">call us directly</a>.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="kit">
+            <div class="content-wrapper"> <h3>What's Inside Your CHD Parent Kit:</h3>
+                <p>Get two on-demand video toolkits delivered to your inbox instantly.</p>
+                <div class="kit-cards-layout"> <div class="kit-card"> <h4>Toolkit 1: Getting a Neurodevelopmental Evaluation</h4>
+                        <p>Understand why, when, and how to seek an evaluation for your child with CHD.</p>
+                        <ul>
+                            <li><strong>Video Lesson:</strong> A step-by-step guide from Dr. Ilardi.</li>
+                            <li><strong>Family Prep Guide (PDF):</strong> How to prepare for your appointments.</li>
+                            <li><strong>School Request Letter (Template):</strong> A ready-to-use letter to request a school evaluation.</li>
+                            <li><strong>Professional's Guide (PDF):</strong> A resource to share with community providers.</li>
+                        </ul>
+                    </div>
+                    <div class="kit-card"> <h4>Toolkit 2: Introduction to Anxiety in CHD</h4>
+                        <p>Learn how anxiety presents in children with CHD and what you can do.</p>
+                        <ul>
+                            <li><strong>Video Lesson:</strong> Understand anxiety symptoms and discover parent-focused strategies.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -341,16 +406,16 @@
 
         <section class="cta">
             <div class="content-wrapper" style="text-align: center;">
-                <h3><strong>Every child with CHD is unique. Gain parenting resources from a leading CHD expert.</strong></h3>
-                <p>Join the waitlist today and be the first to access the on-demand video series.</p>
-                <a href="#hero-form" class="cta-button">Join The Waitlist</a>
+                <h3><strong>Stop feeling overwhelmed and get the clarity you need.</strong></h3>
+                <p>Your free CHD Parent Starter Kit is the first step.</p>
+                <a href="#hero-form" class="cta-button">Get My CHD Kit Now</a>
             </div>
         </section>
     </main>
 
     <div class="sticky-cta" id="sticky-cta">
         <p>Get notified when the video series launches.</p>
-        <a href="#hero-form" class="cta-button-sticky">Join the Waitlist</a>
+        <a href="#hero-form" class="cta-button-sticky">Get My CHD Kit Now</a>
     </div>
 
     <script>
